@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="View,com.glg.mvc.view.View,controller,model,mvcEventDispatcher,view,viewID" name="keywords">
+<title>com.glg.mvc.view.View</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'View - Model-View-Controller';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Model-View-Controller</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/glg/mvc/view/View.html&amp;com/glg/mvc/view/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;View</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class View"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.glg.mvc.view</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class View</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">View <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> flash.display.MovieClip</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="IView.html">IView</a></td>
+</tr>
+</table>
+<p></p>
+   The graphical component in our Model-View-Controller framework.
+   <p><code>View</code> provides an abstract class with convenience
+   properties that access the 'Model,' 'View,' 'Controller' and event
+   dispatching objects.</p>
+  
+   <p></p>
+<br>
+<span class="label">Example</span>
+<br>To use the <code>View</code> class, create a concrete view
+   that subclasses the abstract <code>View</code> class:
+  
+   <div class='listing'><pre>
+  
+    package
+    {
+     import com.glg.mvc.view.View;
+     import com.glg.mvc.view.IView;
+     ...
+  
+     public class MyClassView extends View implements IView
+     {
+      public function MyClassView()
+      {
+       ...
+      }
+  
+     }
+    }
+   </pre></div>
+  
+   <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../view/IView.html" target="">com.glg.mvc.view.IView</a>
+<br>
+<a href="../view/ViewRegister.html" target="">com.glg.mvc.view.ViewRegister</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#viewID">viewID</a> : String<div class="summaryTableDescription">
+    
+    The unique ID of the view.</div>
+</td><td class="summaryTableOwnerCol">View</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#controller">controller</a> : <a href="../controller/IController.html">IController</a>
+<div class="summaryTableDescription">[static]
+    The <code>Controller</code> instance.</div>
+</td><td class="summaryTableOwnerCol">View</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#model">model</a> : Dictionary<div class="summaryTableDescription">[static]
+    The <code>ModelRegister</code> dictionary containing the active models.</div>
+</td><td class="summaryTableOwnerCol">View</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mvcEventDispatcher">mvcEventDispatcher</a> : <a href="../events/MVCEventDispatcher.html">MVCEventDispatcher</a>
+<div class="summaryTableDescription">[static]
+    The <code>MVCEventDispatcher</code> instance.</div>
+</td><td class="summaryTableOwnerCol">View</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#view">view</a> : Dictionary<div class="summaryTableDescription">[static]
+    The <code>ViewRegister</code> dictionary containing the active views.</div>
+</td><td class="summaryTableOwnerCol">View</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="controller"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">controller</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected static var controller:<a href="../controller/IController.html">IController</a></code><p>
+    The <code>Controller</code> instance.
+    </p><p>In general, you will not need to use this. It's here, however, just in case.
+    Normally, the commands will be invoked using the <code>MVCEventDispatcher</code>
+    which then invokes <code>Controller</code>.  Because of this, you must invoke
+    the <code>executeCommand</code> method using an <code>Event</code> object, and the
+    <code>ICommand</code> must be registered in the controller to invoke with said <code>Event</code>.
+   
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/MVCEvent.html" target="">com.glg.mvc.events.MVCEvent</a>
+<br>
+<a href="../controller/command/Command.html" target="">com.glg.mvc.controller.command.Command</a>
+<br>
+<a href="../controller/FrontController.html" target="">com.glg.mvc.controller.FrontController</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>To use the <code>Controller</code> instance to execute an <code>ICommand</code>:
+   
+    <div class='listing'><pre>
+   
+     package
+     {
+      public class MyClassView extends View implements IView
+      {
+       public function MyClassView()
+       {
+        ...
+       }
+   
+       public function myMethod():void
+       {
+        //first the Command must be registered
+        controller.registerCommand(Event.EVENT, MyCommandClass);
+        
+        ...
+   
+        //now it can be executed using 'executeCommand'
+        var event:Event = new Event(Event.EVENT);
+        controller.executeCommand(event);
+       }
+      }
+     }
+    </pre></div>
+   
+    <p></p>
+</div>
+<a name="model"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">model</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected static var model:Dictionary</code><p>
+    The <code>ModelRegister</code> dictionary containing the active models.
+   
+    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../model/IModel.html" target="">com.glg.mvc.model.IModel</a>
+<br>
+<a href="../model/ModelRegister.html" target="">com.glg.mvc.model.ModelRegister</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>To access an <code>IModel</code> object from the <code>model</code>
+    convenience property:
+   
+    <div class='listing'><pre>
+   
+     package
+     {
+      import com.glg.mvc.view.View;
+      import com.glg.mvc.view.IView;
+      ...
+   
+      public class MyClassView extends View implements IView
+      {
+       public function MyClassView()
+       {
+        ...
+       }
+   
+       public function myMethod():void
+       {
+        var model:IModel = model["myModelID"];
+       }
+      }
+     }
+    </pre></div>
+   
+    <p></p>
+</div>
+<a name="mvcEventDispatcher"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mvcEventDispatcher</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected static var mvcEventDispatcher:<a href="../events/MVCEventDispatcher.html">MVCEventDispatcher</a></code><p>
+    The <code>MVCEventDispatcher</code> instance.
+    </p><p>This is normally used in order to notify the <code>Controller</code> that
+    it needs to execute an <code>ICommand</code>.</p>
+    
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/MVCEvent.html" target="">com.glg.mvc.events.MVCEvent</a>
+<br>
+<a href="../events/MVCEventDispatcher.html" target="">com.glg.mvc.events.MVCEventDispatcher</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>To dispatch an event via the <code>MVCEventDispatcher</code>,
+    call its <code>dispatchEvent</code> method:
+   
+    <div class='listing'><pre>
+   
+     package
+     {
+      import com.glg.mvc.events.MVCEvent;
+      ...
+   
+      public class MyClassView extends View implements IView
+      {
+       public function MyClassView()
+       {
+        myButton.addEventListener(MouseEvent.CLICK, onClick);
+        ...
+       }
+   
+       public function onClick(e:MouseEvent):void
+       {
+        var event:MVCEvent = new CustomMVCEvent(CustomMVCEvent.EVENT);
+        mvcEventDispatcher.dispatchEvent(event);
+       }
+      }
+     }
+    </pre></div>
+   
+    <p></p>
+</div>
+<a name="view"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">view</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected static var view:Dictionary</code><p>
+    The <code>ViewRegister</code> dictionary containing the active views.
+   
+    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../view/IView.html" target="">com.glg.mvc.view.IView</a>
+<br>
+<a href="../view/ViewRegister.html" target="">com.glg.mvc.view.ViewRegister</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>To access an <code>IView</code> object from the <code>view</code>
+    convenience property:
+   
+    <div class='listing'><pre>
+   
+     package
+     {
+      import com.glg.mvc.view.View;
+      import com.glg.mvc.view.IView;
+      ...
+   
+      public class MyClassView extends View implements IView
+      {
+       public function MyClassView()
+       {
+        ...
+       }
+   
+       public function myMethod():void
+       {
+        var view:IView = view["myViewID"];
+       }
+      }
+     }
+    </pre></div>
+   
+    <p></p>
+</div>
+<a name="viewID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">viewID</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>viewID:String</code>&nbsp;&nbsp;[read-write]<p>
+    
+    The unique ID of the view.
+    </p><p>Used in the <code>ViewRegister</code> to keep
+    track of the <code>IView</code>.</p>
+   
+    <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get viewID():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set viewID(value:String):void</code>
+<br>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

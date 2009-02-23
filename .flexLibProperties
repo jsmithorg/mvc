@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="com.glg.mvc.controller.Controller"/>
+<classEntry path="com.glg.mvc.controller.FrontController"/>
+<classEntry path="com.glg.mvc.controller.IController"/>
+<classEntry path="com.glg.mvc.controller.business.BusinessDelegate"/>
+<classEntry path="com.glg.mvc.controller.business.HTTPServiceCollection"/>
+<classEntry path="com.glg.mvc.controller.business.HTTPServiceDefinition"/>
+<classEntry path="com.glg.mvc.controller.business.IServiceCollection"/>
+<classEntry path="com.glg.mvc.controller.business.IServiceDefinition"/>
+<classEntry path="com.glg.mvc.controller.business.IServiceRegister"/>
+<classEntry path="com.glg.mvc.controller.business.ServiceCollection"/>
+<classEntry path="com.glg.mvc.controller.business.ServiceRegister"/>
+<classEntry path="com.glg.mvc.controller.business.WebServiceCollection"/>
+<classEntry path="com.glg.mvc.controller.business.WebServiceDefinition"/>
+<classEntry path="com.glg.mvc.controller.command.Command"/>
+<classEntry path="com.glg.mvc.controller.command.CompoundCommand"/>
+<classEntry path="com.glg.mvc.controller.command.ICommand"/>
+<classEntry path="com.glg.mvc.controller.command.SequenceCommand"/>
+<classEntry path="com.glg.mvc.error.IMVCError"/>
+<classEntry path="com.glg.mvc.error.MVCError"/>
+<classEntry path="com.glg.mvc.events.MVCEvent"/>
+<classEntry path="com.glg.mvc.events.MVCEventDispatcher"/>
+<classEntry path="com.glg.mvc.model.IModel"/>
+<classEntry path="com.glg.mvc.model.IModelRegister"/>
+<classEntry path="com.glg.mvc.model.IValueObject"/>
+<classEntry path="com.glg.mvc.model.ModelRegister"/>
+<classEntry path="com.glg.mvc.view.IView"/>
+<classEntry path="com.glg.mvc.view.IViewRegister"/>
+<classEntry path="com.glg.mvc.view.View"/>
+<classEntry path="com.glg.mvc.view.ViewRegister"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>

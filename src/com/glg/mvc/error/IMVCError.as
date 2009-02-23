@@ -1,0 +1,1 @@
+﻿package com.glg.mvc.error{	public interface IMVCError	{			}//end interface	}//end package
