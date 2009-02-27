@@ -1,1 +1,0 @@
-﻿package com.glg.mvc.controller.business{	public interface IServiceDefinition	{		function get serviceID():String;		function get url():String;			}//end interface	}//end package

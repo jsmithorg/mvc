@@ -1,0 +1,1 @@
+﻿package org.jsmith.mvc.model{	/**	 * 	A marker interface for Value Objects.	 * 	 * 	@see com.glg.mvc.model.IModel	 * 	 * 	@author Justin Smith [justin.smith@glg.com]	 */	public interface IValueObject {}	}//end package

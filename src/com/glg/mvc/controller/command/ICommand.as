@@ -1,2 +1,0 @@
-﻿package com.glg.mvc.controller.command{	import flash.events.Event;
-	import flash.events.IEventDispatcher;		public interface ICommand extends IEventDispatcher	{		function execute(event:Event = null):void;		function undo(event:Event = null):void;			}//end class	}//end package

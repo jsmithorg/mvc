@@ -1,0 +1,1 @@
+﻿package org.jsmith.mvc.error{	public interface IMVCError	{			}//end interface	}//end package
