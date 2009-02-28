@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="IViewRegister,org.jsmith.mvc.view.IViewRegister,views,hasView,register,remove,retrieve" name="keywords">
+<title>org.jsmith.mvc.view.IViewRegister</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'IViewRegister - Model-View-Controller';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Model-View-Controller</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?org/jsmith/mvc/view/IViewRegister.html&amp;org/jsmith/mvc/view/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Interface&nbsp;IViewRegister</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Interface IViewRegister"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.jsmith.mvc.view</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public interface IViewRegister extends <a href="none">flash.events.IEventDispatcher</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implementors</td><td><a href="../view/ViewRegister.html">ViewRegister</a></td>
+</tr>
+</table>
+<p></p>
+   The <code>IViewRegister</code> is an interface for the single access point to 
+   all the application's view instances (<code>IView</code>).
+   <p><code>IView</code> instances must be registered using the class that implements this interface in order
+   to participate in the MVC framework.</p>
+   <p>Classes the implement <code>IViewRegister</code> must keep track of and contain
+   references to any <code>IView</code> instances registered using the <code>register(view:IView)</code>
+   method.</p>
+  
+   <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../view/IView.html" target="">org.jsmith.mvc.view.IView</a>
+<br>
+<a href="../view/View.html" target="">org.jsmith.mvc.view.View</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#views">views</a> : Dictionary<div class="summaryTableDescription">[read-only]
+   The <code>Dictionary</code> containing the <code>IView</code> instances.</div>
+</td><td class="summaryTableOwnerCol">IViewRegister</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hasView()">hasView</a>(viewID:String):Boolean</div>
+<div class="summaryTableDescription">
+    Boolean expressing whether a particular view is registered or
+    not based on the view's ID.</div>
+</td><td class="summaryTableOwnerCol">IViewRegister</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#register()">register</a>(view:<a href="IView.html">IView</a>, viewID:String = null):void</div>
+<div class="summaryTableDescription">
+    Registers an <code>IView</code> instance with the <code>ViewRegister</code>.</div>
+</td><td class="summaryTableOwnerCol">IViewRegister</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#remove()">remove</a>(viewID:String):void</div>
+<div class="summaryTableDescription">
+    Removes a particular view based on the view's ID.</div>
+</td><td class="summaryTableOwnerCol">IViewRegister</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#retrieve()">retrieve</a>(viewID:String):<a href="../view/IView.html">IView</a>
+</div>
+<div class="summaryTableDescription">
+    Retrieves a particular view based on the view's ID.</div>
+</td><td class="summaryTableOwnerCol">IViewRegister</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="views"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">views</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>views:Dictionary</code>&nbsp;&nbsp;[read-only]<p>
+   The <code>Dictionary</code> containing the <code>IView</code> instances.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get views():Dictionary</code>
+<br>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="hasView()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasView</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hasView(viewID:String):Boolean</code><p>
+    Boolean expressing whether a particular view is registered or
+    not based on the view's ID.
+   
+    </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">viewID</span>:String</code> &mdash; The ID of the <code>IView</code> instance.
+   
+    </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; <code>true</code> if the view is present, <code>false</code> if the view could not be found.
+   </td>
+</tr>
+</table>
+</div>
+<a name="register()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">register</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function register(view:<a href="IView.html">IView</a>, viewID:String = null):void</code><p>
+    Registers an <code>IView</code> instance with the <code>ViewRegister</code>.
+   
+    </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">view</span>:<a href="IView.html">IView</a></code> &mdash; The <code>IView</code> instance.
+    </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">viewID</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The ID of the <code>IView</code> instance (this is optional 
+    in case the viewID has been set in the <code>IView</code> instance).
+   
+    </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; The viewID must be set (either in the IView
+    or as a provided parameter), otherwise this error is thrown with the following 
+    message: <em>viewID must be set before registering the IView</em>
+   </td>
+</tr>
+</table>
+</div>
+<a name="remove()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">remove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function remove(viewID:String):void</code><p>
+    Removes a particular view based on the view's ID.
+    </p><p>If the view does not exist, the <code>remove</code>
+    request is silently ignored.</p>
+   
+    <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">viewID</span>:String</code> &mdash; The ID of the <code>IView</code> instance.
+   </td>
+</tr>
+</table>
+</div>
+<a name="retrieve()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">retrieve</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function retrieve(viewID:String):<a href="../view/IView.html">IView</a></code><p>
+    Retrieves a particular view based on the view's ID.
+    </p><p>If the view does not exist, <code>null</code> is 
+    returned</p>
+   
+    <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">viewID</span>:String</code> &mdash; The ID of the <code>IView</code> instance.
+   
+    </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../view/IView.html">IView</a></code> &mdash; 
+                        An <code>IView</code> instance.
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

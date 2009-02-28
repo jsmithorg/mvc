@@ -4,10 +4,11 @@
 	 * 	The graphical component in our Model-View-Controller framework.
 	 * 	<p><code>IView</code> provides a common interface for view
 	 * 	components.</p>
+	 *  <p><a target="_blank" href="http://en.wikipedia.org/wiki/Model-view-controller">Model-View-Controller</a> on Wikipedia</p>
 	 * 
-	 * 	@see com.glg.mvc.view.View
+	 * 	@see org.jsmith.mvc.view.View
 	 * 
-	 * 	@author Justin Smith [justin.smith@glg.com]
+	 * 	@author Justin Smith [justin@jsmith.org]
 	 */
 	public interface IView
 	{
@@ -16,8 +17,8 @@
 		 * 	<p>Used in the <code>ViewRegister</code> to keep
 		 * 	track of the <code>IView</code>.</p>
 		 * 
-		 * 	@see com.glg.mvc.view.View
-		 * 	@see com.glg.mvc.view.ViewRegister
+		 * 	@see org.jsmith.mvc.view.View
+		 * 	@see org.jsmith.mvc.view.ViewRegister
 		 */
 		function get viewID():String;
 		function set viewID(value:String):void;

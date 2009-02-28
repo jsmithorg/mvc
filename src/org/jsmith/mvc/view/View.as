@@ -20,8 +20,8 @@
 	 * 
 	 * 		package
 	 * 		{
-	 * 			import com.glg.mvc.view.View;
-	 * 			import com.glg.mvc.view.IView;
+	 * 			import org.jsmith.mvc.view.View;
+	 * 			import org.jsmith.mvc.view.IView;
 	 * 			...
 	 * 
 	 * 			public class MyClassView extends View implements IView
@@ -35,8 +35,8 @@
 	 * 		}
 	 * 	</listing>
 	 * 
-	 * 	@see com.glg.mvc.view.IView
-	 * 	@see com.glg.mvc.view.ViewRegister
+	 * 	@see org.jsmith.mvc.view.IView
+	 * 	@see org.jsmith.mvc.view.ViewRegister
 	 * 
 	 * 	@author Justin Smith [justin.smith@glg.com]
 	 */
@@ -52,8 +52,8 @@
 		 * 
 		 * 		package
 		 * 		{
-		 * 			import com.glg.mvc.view.View;
-		 * 			import com.glg.mvc.view.IView;
+		 * 			import org.jsmith.mvc.view.View;
+		 * 			import org.jsmith.mvc.view.IView;
 		 * 			...
 		 * 
 		 * 			public class MyClassView extends View implements IView
@@ -71,8 +71,8 @@
 		 * 		}
 		 * 	</listing>
 		 * 
-		 * 	@see com.glg.mvc.model.IModel
-		 * 	@see com.glg.mvc.model.ModelRegister
+		 * 	@see org.jsmith.mvc.model.IModel
+		 * 	@see org.jsmith.mvc.model.ModelRegister
 		 */
 		protected static var model:Dictionary = ModelRegister.getModels();
 		
@@ -112,9 +112,9 @@
 		 * 		}
 		 * 	</listing>
 		 * 
-		 * 	@see com.glg.mvc.events.MVCEvent
-		 * 	@see com.glg.mvc.controller.command.Command
-		 * 	@see com.glg.mvc.controller.FrontController
+		 * 	@see org.jsmith.mvc.events.MVCEvent
+		 * 	@see org.jsmith.mvc.controller.command.Command
+		 * 	@see org.jsmith.mvc.controller.FrontController
 		 */
 		protected static var controller:IController = Controller.getInstance();
 		
@@ -128,8 +128,8 @@
 		 * 
 		 * 		package
 		 * 		{
-		 * 			import com.glg.mvc.view.View;
-		 * 			import com.glg.mvc.view.IView;
+		 * 			import org.jsmith.mvc.view.View;
+		 * 			import org.jsmith.mvc.view.IView;
 		 * 			...
 		 * 
 		 * 			public class MyClassView extends View implements IView
@@ -147,8 +147,8 @@
 		 * 		}
 		 * 	</listing>
 		 * 
-		 * 	@see com.glg.mvc.view.IView
-		 * 	@see com.glg.mvc.view.ViewRegister
+		 * 	@see org.jsmith.mvc.view.IView
+		 * 	@see org.jsmith.mvc.view.ViewRegister
 		 */
 		protected static var view:Dictionary = ViewRegister.getViews();
 		
@@ -164,7 +164,7 @@
 		 * 
 		 * 		package
 		 * 		{
-		 * 			import com.glg.mvc.events.MVCEvent;
+		 * 			import org.jsmith.mvc.events.MVCEvent;
 		 * 			...
 		 * 
 		 * 			public class MyClassView extends View implements IView
@@ -177,15 +177,15 @@
 		 * 
 		 * 				public function onClick(e:MouseEvent):void
 		 * 				{
-		 * 					var event:MVCEvent = new CustomMVCEvent(CustomMVCEvent.EVENT);
+		 * 					var event:MVCEvent = new MyMVCEvent(MyMVCEvent.EVENT);
 		 * 					mvcEventDispatcher.dispatchEvent(event);
 		 * 				}
 		 * 			}
 		 * 		}
 		 * 	</listing>
 		 * 
-		 * 	@see com.glg.mvc.events.MVCEvent
-		 * 	@see com.glg.mvc.events.MVCEventDispatcher
+		 * 	@see org.jsmith.mvc.events.MVCEvent
+		 * 	@see org.jsmith.mvc.events.MVCEventDispatcher
 		 */
 		protected static var mvcEventDispatcher:MVCEventDispatcher = MVCEventDispatcher.getInstance();
 		
@@ -196,6 +196,15 @@
 		public function set viewID(value:String):void { _viewID = value; }
 		private var _viewID:String;
 		
+		/**
+		 * 	@inheritDoc
+		 */
+		public override function toString():String
+		{
+			return "[ View id=" + _viewID + " ]";
+				
+		}//end method
+	
 	}//end class
 	
 }//end package

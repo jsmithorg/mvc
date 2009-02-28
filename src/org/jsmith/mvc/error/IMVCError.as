@@ -1,1 +1,1 @@
-﻿package org.jsmith.mvc.error{	public interface IMVCError	{			}//end interface	}//end package
+﻿package org.jsmith.mvc.error{	/**	 * 	Marker interface for <code>MVCError</code objects.	 * 	 *  @see org.jsmith.mvc.MVCError	 * 	 * 	@author Justin Smith [justin@jsmith.org]	 */	public interface IMVCError {}	}//end package
