@@ -42,7 +42,21 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("In
 </tr>
 </table>
 <p></p>
-<p></p>
+   The <code>ICommand</code> is an interface for implementing the command pattern for use in 
+   the Model-View-Controller framework.
+   <p><a href="http://en.wikipedia.org/wiki/Command_pattern">Command pattern on Wikipedia</a></p>
+  
+   <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../command/Command.html" target="">org.jsmith.mvc.controller.command.Command</a>
+<br>
+<a href="../command/CompoundCommand.html" target="">org.jsmith.mvc.controller.command.CompoundCommand</a>
+<br>
+<a href="../command/SequenceCommand.html" target="">org.jsmith.mvc.controller.command.SequenceCommand</a>
+</div>
 <br>
 <hr>
 </div>
@@ -57,14 +71,16 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("In
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
 <a class="signatureLink" href="#execute()">execute</a>(event:Event = null):void</div>
-<div class="summaryTableDescription"></div>
+<div class="summaryTableDescription">
+    Executes any command logic desired.</div>
 </td><td class="summaryTableOwnerCol">ICommand</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
 <a class="signatureLink" href="#undo()">undo</a>(event:Event = null):void</div>
-<div class="summaryTableDescription"></div>
+<div class="summaryTableDescription">
+    Undoes the execution of any command logic performed in the <code>execute(event:Event)</code> method.</div>
 </td><td class="summaryTableOwnerCol">ICommand</td>
 </tr>
 </table>
@@ -83,10 +99,14 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function execute(event:Event = null):void</code><span class="label">Parameters</span>
+<code>public function execute(event:Event = null):void</code><p>
+    Executes any command logic desired.
+   
+    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">event</span>:Event</code> (default = <code>null</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code> (default = <code>null</code>)<code></code> &mdash; An <code>Event</code> object that is passed to the <code>ICommand</code>
+   </td>
 </tr>
 </table>
 </div>
@@ -97,10 +117,14 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function undo(event:Event = null):void</code><span class="label">Parameters</span>
+<code>public function undo(event:Event = null):void</code><p>
+    Undoes the execution of any command logic performed in the <code>execute(event:Event)</code> method.
+   
+    </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">event</span>:Event</code> (default = <code>null</code>)<code></code></td>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code> (default = <code>null</code>)<code></code> &mdash; An <code>Event</code> object that is passed to the <code>ICommand</code>
+   </td>
 </tr>
 </table>
 </div>

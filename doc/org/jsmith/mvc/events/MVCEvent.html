@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
-<meta content="MVCEvent,org.jsmith.mvc.events.MVCEvent,MODEL_REGISTERED,MODEL_REMOVED,VIEW_REGISTERED,VIEW_REMOVED,data,dispatch" name="keywords">
+<meta content="MVCEvent,org.jsmith.mvc.events.MVCEvent,COMMAND_PROGRESS,MODEL_REGISTERED,MODEL_REMOVED,VIEW_REGISTERED,VIEW_REMOVED,data,dispatch" name="keywords">
 <title>org.jsmith.mvc.events.MVCEvent</title>
 </head>
 <body>
@@ -103,6 +103,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
 <tr>
 <th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#COMMAND_PROGRESS">COMMAND_PROGRESS</a> : String = "commandProgress"<div class="summaryTableDescription">[static]
+    Represents the event that is dispatched when an <code>ICommand</code>
+    progresses.</div>
+</td><td class="summaryTableOwnerCol">MVCEvent</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MODEL_REGISTERED">MODEL_REGISTERED</a> : String = "modelRegistered"<div class="summaryTableDescription">[static]
@@ -224,10 +230,28 @@ showHideInherited();
 </div>
 <a name="constantDetail"></a>
 <div class="detailSectionHeader">Constant detail</div>
+<a name="COMMAND_PROGRESS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">COMMAND_PROGRESS</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const COMMAND_PROGRESS:String = "commandProgress"</code><p>
+    Represents the event that is dispatched when an <code>ICommand</code>
+    progresses.
+   
+    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../controller/command/ICommand.html" target="">org.jsmith.mvc.controller.command.ICommand</a>
+</div>
+</div>
 <a name="MODEL_REGISTERED"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">MODEL_REGISTERED</td><td class="detailHeaderType">constant</td>
+<td class="detailHeaderName">MODEL_REGISTERED</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
