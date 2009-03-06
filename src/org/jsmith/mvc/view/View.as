@@ -193,7 +193,19 @@
 		 * 	@inheritDoc
 		 */
 		public function get viewID():String { return _viewID; }
-		public function set viewID(value:String):void { _viewID = value; }
+		public function set viewID(value:String):void 
+		{ 
+			//if this view has an id already, then it's probably
+			//been registered and we need to remove it
+			if(ViewRegister.getInstance().hasView(_viewID))
+				ViewRegister.getInstance().remove(_viewID);
+				
+			_viewID = value; 
+			
+			//register our new view
+			ViewRegister.getInstance().register(this, _viewID);
+			
+		}//end property
 		private var _viewID:String;
 		
 		/**
