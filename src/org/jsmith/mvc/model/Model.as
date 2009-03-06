@@ -38,7 +38,19 @@ package org.jsmith.mvc.model
 		 * 	@inheritDoc
 		 */
 		public function get modelID():String { return _modelID; }
-		public function set modelID(value:String):void { _modelID = value; }
+		public function set modelID(value:String):void 
+		{ 
+			//if this model has an id already, then it's probably
+			//been registered and we need to remove it
+			if(ModelRegister.getInstance().hasModel(_modelID))
+				ModelRegister.getInstance().remove(_modelID);
+				
+			_modelID = value; 
+			
+			//register our new view
+			ModelRegister.getInstance().register(this, _modelID);
+		
+		}//end property
 		private var _modelID:String;
 		
 		/**
