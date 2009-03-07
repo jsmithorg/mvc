@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute"
+	applicationComplete="onApplicationComplete();" xmlns:views="com.mynamespace.views.*">
+	
+	<mx:Script>
+		<![CDATA[
+			
+			import org.jsmith.mvc.controller.*;
+			import org.jsmith.mvc.events.*;
+			
+			import com.mynamespace.controllers.AppController;
+			import com.mynamespace.events.ApplicationEvent;
+			 
+			/**
+			 * 	Use as our entry point - from here, we initialize the application
+			 */
+			private function onApplicationComplete(e:Event = null):void
+			{ 
+				//init our controller, then kickoff the application
+				initController();
+				initApplication();
+				
+			}//end method
+			
+			/**
+			 * 	Registers our applications front controller (<code>AppController</code>)
+			 *  with the <code>Controller</code> singleton
+			 */
+			private function initController():void
+			{
+				var c:Controller = Controller.getInstance() as Controller
+				c.registerFrontController(new AppController());
+				
+			}//end method
+			
+			/**
+			 * 	Dispatch our <code>INIT_APPLICATION</code> event with the url of our configuration 
+			 *  file to get the app moving.
+			 */
+			private function initApplication():void
+			{
+				//use the default url if the flash vars haven't been set
+				//var configUrl:String = loaderInfo.parameters["config"] ? loaderInfo.parameters["config"] : DEFAULT_CONFIG_URL;
+				
+				//create an INIT_APPLICATION event and dispatch it via the MVC event dispatcher
+				//var e:MVCEvent = new ApplicationEvent(ApplicationEvent.INIT_APPLICATION, configUrl);
+				//e.dispatch();
+				
+			}//end method
+			
+		]]>
+	</mx:Script>
+	
+	<views:MyView id="myView" />
+	
+</mx:Application>

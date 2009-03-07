@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mvc:UIView xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:mvc="org.jsmith.mvc.view.*" 
+	implements="org.jsmith.mvc.view.IView"
+    preinitialize="preInit();">
+	
+	<mx:Script>
+		<![CDATA[
+		
+			import com.mynamespace.models.MyModel;
+			
+			import org.jsmith.mvc.events.MVCEvent;
+			import org.jsmith.mvc.model.*;
+			import org.jsmith.mvc.view.ViewRegister;
+			
+			
+			[Bindable]
+			/**
+			 *  Our <code>MyModel</code> reference.
+			 */
+			private var myModel:MyModel;
+			
+			/**
+			 * 	On pre-initialization, begin listening for <code>IModel</code> 
+			 *  registrations.
+			 */
+			private function preInit():void
+			{
+				//listen for our MyModel to be registered
+				ModelRegister.getInstance().addEventListener(MVCEvent.MODEL_REGISTERED, onModelRegistered);
+			
+			}//end method
+			
+			/**
+			 * 	We need to override this <code>UIComponent</code>
+			 *  method in order to add our elements to the stage.
+			 */
+			protected override function createChildren():void
+			{
+				super.createChildren();
+				
+				addChild(myElement);
+				
+			}//end method
+			
+			/**
+			 * 	Called when an <code>IModel</code> has been registered
+			 *  with the MVC's <code>ModelRegister</code>.
+			 *  In this case, we are looking for a <code>MyModel</code>
+			 */
+			private function onModelRegistered(e:MVCEvent):void
+			{
+				//if the model that was registered is not a LeagueModel
+				//don't save the reference
+				var model:MyModel = e.data as MyModel;
+				if(model == null)
+					return;
+					
+				myModel = model;
+				
+			}//end method
+			
+		]]>
+	</mx:Script>
+	
+	<mx:Panel id="myElement" />
+	
+</mvc:UIView>
