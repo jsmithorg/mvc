@@ -23,6 +23,7 @@
 <classEntry path="org.jsmith.mvc.model.ModelRegister"/>
 <classEntry path="org.jsmith.mvc.view.IView"/>
 <classEntry path="org.jsmith.mvc.view.IViewRegister"/>
+<classEntry path="org.jsmith.mvc.view.UIView"/>
 <classEntry path="org.jsmith.mvc.view.View"/>
 <classEntry path="org.jsmith.mvc.view.ViewRegister"/>
 </includeClasses>
