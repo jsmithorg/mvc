@@ -1,5 +1,7 @@
 package org.jsmith.mvc.model
 {
+	import flash.events.EventDispatcher;
+	
 	/**
 	 * 	The state-keeping component in our Model-View-Controller framework.
 	 * 	<p><code>Model</code> provides an abstract class for model objects
@@ -32,7 +34,7 @@ package org.jsmith.mvc.model
 	 * 
 	 * 	@author Justin Smith [justin@jsmith.org]
 	 */
-	public class Model implements IModel
+	public class Model extends EventDispatcher implements IModel
 	{
 		/**
 		 * 	@inheritDoc
@@ -66,7 +68,7 @@ package org.jsmith.mvc.model
 		/**
 		 * 	@inheritDoc
 		 */
-		public function toString():String
+		public override function toString():String
 		{
 			return "[ Model id=\"" + _id + "\" ]";
 				
