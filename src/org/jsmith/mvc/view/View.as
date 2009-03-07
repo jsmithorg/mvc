@@ -1,7 +1,7 @@
 ﻿package org.jsmith.mvc.view
 {
-	import flash.display.MovieClip;
 	import flash.utils.Dictionary;
+	import flash.display.Sprite;
 	
 	import org.jsmith.mvc.controller.*;
 	import org.jsmith.mvc.events.MVCEventDispatcher;
@@ -40,7 +40,7 @@
 	 * 
 	 * 	@author Justin Smith [justin.smith@glg.com]
 	 */
-	public class View extends MovieClip implements IView
+	public class View extends Sprite implements IView
 	{
 		/**
 		 * 	The <code>ModelRegister</code> dictionary containing the active models.
@@ -192,28 +192,40 @@
 		/**
 		 * 	@inheritDoc
 		 */
-		public function get viewID():String { return _viewID; }
-		public function set viewID(value:String):void 
+		public function get id():String { return _id; }
+		public function set id(value:String):void 
 		{ 
+			//super.id = value;
+			
 			//if this view has an id already, then it's probably
 			//been registered and we need to remove it
-			if(ViewRegister.getInstance().hasView(_viewID))
-				ViewRegister.getInstance().remove(_viewID);
+			if(ViewRegister.getInstance().hasView(_id))
+				ViewRegister.getInstance().remove(_id);
 				
-			_viewID = value; 
+			_id = value; 
+			
+			//we don't want to register a null id
+			if(_id == null)
+				return;
 			
 			//register our new view
-			ViewRegister.getInstance().register(this, _viewID);
+			ViewRegister.getInstance().register(this);
 			
 		}//end property
-		private var _viewID:String;
+		private var _id:String;
+		
+		public function View(id:String = null)
+		{
+			this.id = id;
+			
+		}//end constructor
 		
 		/**
 		 * 	@inheritDoc
 		 */
 		public override function toString():String
 		{
-			return "[ View id=" + _viewID + " ]";
+			return "[ View id=\"" + _id + "\" ]";
 				
 		}//end method
 	

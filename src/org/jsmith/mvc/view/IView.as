@@ -20,8 +20,8 @@
 		 * 	@see org.jsmith.mvc.view.View
 		 * 	@see org.jsmith.mvc.view.ViewRegister
 		 */
-		function get viewID():String;
-		function set viewID(value:String):void;
+		function get id():String;
+		function set id(value:String):void;
 		
 		/**
 		 * 	Returns a string representation of the <code>IView</code> object.
